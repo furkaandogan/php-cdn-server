@@ -13,7 +13,7 @@ live demo for [tihs click](http://php.cdn.exlinetr.com "tihs click")
   Request Method: POST
   Request URL: http://php.cdn.exlinetr.com/FileUpload.php
   Request Params:
-  - AppID (req)   : Uniq is the key generated for the customer yada site 
+ - AppID (req)   : Uniq is the key generated for the customer yada site 
  - Content (req) : The type of the main directory address of the uploaded file
  - FileType (req) : Folder to which the uploaded file will be grouped
   
@@ -48,7 +48,7 @@ live demo for [tihs click](http://php.cdn.exlinetr.com "tihs click")
   Request Method: GET
   Request URL: http://php.cdn.exlinetr.com/GetFile.php
   Request Params:
-  - filepath (req)   : Address of the file (response param name : path)
+ - filepath (req)   : Address of the file (response param name : path)
  - w (opt) : Image width size, 0 is given for the original size
  - h (opt) : Image height size , 0 is given for the original size
 
