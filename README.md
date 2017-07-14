@@ -15,9 +15,9 @@ live demo for [tihs click](http://php.cdn.exlinetr.com "tihs click")
   Request URL: http://php.cdn.exlinetr.com/FileUpload.php
   
   Request Params:
- - AppID (req)   : Uniq is the key generated for the customer yada site 
- - Content (req) : The type of the main directory address of the uploaded file
- - FileType (req) : Folder to which the uploaded file will be grouped
+  - AppID (req)   : Uniq is the key generated for the customer yada site 
+  - Content (req) : The type of the main directory address of the uploaded file
+  - FileType (req) : Folder to which the uploaded file will be grouped
   
 ```html
 <form enctype="multipart/form-data" method="post" action="FileUpload.php">
@@ -52,9 +52,9 @@ live demo for [tihs click](http://php.cdn.exlinetr.com "tihs click")
   Request URL: http://php.cdn.exlinetr.com/GetFile.php
   
   Request Params:
- - filepath (req)   : Address of the file (response param name : path)
- - w (opt) : Image width size, 0 is given for the original size
- - h (opt) : Image height size , 0 is given for the original size
+  - filepath (req)   : Address of the file (response param name : path)
+  - w (opt) : Image width size, 0 is given for the original size
+  - h (opt) : Image height size , 0 is given for the original size
 
 ###### original size
 [http://phpcdn.exlinetr.com/GetFile.php?FilePath=files/TestUploadApplication/Test/Images/A07FC9E5-E250-ABAA-BB4F-E37629C50203.jpg&w=0&h=0](http://phpcdn.exlinetr.com/GetFile.php?FilePath=files/TestUploadApplication/Test/Images/A07FC9E5-E250-ABAA-BB4F-E37629C50203.jpg&w=0&h=0 "http://phpcdn.exlinetr.com/GetFile.php?FilePath=files/TestUploadApplication/Test/Images/A07FC9E5-E250-ABAA-BB4F-E37629C50203.jpg&w=0&h=0")
