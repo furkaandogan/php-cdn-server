@@ -37,7 +37,7 @@ function upload(){
     {
         $results= mkdir($filePath,0777,true);
     }
-    $strFile=array();
+    $uploadedFiles=array();
     $index=0;
     foreach ($_FILES["image"]["error"] as $key => $error) {
         if ($error == UPLOAD_ERR_OK) {
@@ -46,12 +46,17 @@ function upload(){
             $result = move_uploaded_file($tmp_name, $filePath."/$name");
             if ($result)
             {
-                $strFile[$index]=$filePath."/$name";
+                $file=array();
+                $file["path"]=$filePath."/$name";
+                $file["aciklama"]="resim upload testidir linklere tiklayarak resimleri kontrol edebilirsiniz.";
+		        $file["orginal_Link"]="http://phpcdn.exlinetr.com/GetFile.php?FilePath=".$filePath."/$name"."&w=0&h=0";
+		        $file["100x100_Link"]="http://phpcdn.exlinetr.com/GetFile.php?FilePath=".$filePath."/$name"."&w=100&h=100";
+                array_push($uploadedFiles,$file);
                 $index++;
             }
         }
     }
-    return $strFile;
+    return $uploadedFiles;
 }
 header('Content-Type: application/json');
 header("Access-Control-Allow-Origin:*");
