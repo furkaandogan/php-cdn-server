@@ -1,0 +1,26 @@
+version: '3.5'
+services:
+  svayp_cdn_api:
+    hostname: svayp_cdn_api
+    user: root
+    image: exlinetr-cdn:1.0.0
+    deploy:
+      mode: replicated
+      replicas: 3
+      restart_policy:
+        condition: on-failure
+        max_attempts: 0
+        delay: 2ms
+   volumes:
+      - /mnt/svayp/cdn/files:/var/www/html/files
+    ports:
+      - 5004:80
+    networks:
+      - svapy_svayp_cdn_network
+
+networks:
+  svapy_svayp_cdn_network:
+    name: svapy_svayp_cdn_network
+    driver: overlay
+
+
